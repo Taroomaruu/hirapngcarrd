@@ -15,30 +15,30 @@
     }
 
     .card {
-    background-color: #5a3530;
-    border-radius: 24px;
-    max-width: 1100px;
-    width: 100%;
-    overflow: hidden;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      background-color: #5a3530;
+      border-radius: 24px;
+      max-width: 900px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
     }
 
     .card-body {
       display: flex;
-      padding: 36px 36px 28px 40px;
-      gap: 20px;
+      min-height: 420px;
     }
 
     .card-left {
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
+      padding: 44px 36px 36px 44px;
     }
 
     h1 {
       color: #e8849a;
-      font-size: 3.5rem;
+      font-size: 3rem;
       font-weight: 900;
       margin: 0;
     }
@@ -91,29 +91,29 @@
       opacity: 0.7;
     }
 
+    /* Image fills the entire right side */
     .card-right {
-    flex: 0 0 290px;
-    position: relative;
-    min-height: 310px;
+      flex: 0 0 380px;
+      position: relative;
+      overflow: hidden;
     }
-    
-   .card-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 0 0 12px 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
+
+    .card-right img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
     }
 
     .bottom-bar {
       background-color: #8a4a44;
       border-radius: 60px;
       margin: 0 20px 20px 20px;
-      padding: 12px 24px;
+      padding: 14px 28px;
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -126,7 +126,7 @@
       text-decoration: none;
       color: #f5c8d4;
       font-weight: 700;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       transition: transform 0.1s, color 0.1s;
     }
 
@@ -136,8 +136,8 @@
     }
 
     .bar-icon {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background-color: #5a3530;
       border: 1.5px solid #c47080;
@@ -148,7 +148,7 @@
     }
 
     .bar-icon img {
-     filter: brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(300deg);
+      filter: brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(300deg);
     }
 
     .bar-text-name {
@@ -172,12 +172,13 @@
       background-color: rgba(255,255,255,0.15);
     }
 
-    @media (max-width: 600px) {
-      .card-body { flex-direction: column; padding: 24px; }
-      .card-right img { width: 100%; height: 220px; border-radius: 12px; }
-      .card-right { flex: none; }
-      h1 { font-size: 2.8rem; }
-      .bottom-bar { flex-wrap: wrap; border-radius: 16px; gap: 10px; }
+    @media (max-width: 650px) {
+      .card-body { flex-direction: column; }
+      .card-left { padding: 28px 24px 20px 24px; }
+      .card-right { flex: none; height: 280px; }
+      .card-right img { border-radius: 0; }
+      h1 { font-size: 2.4rem; }
+      .bottom-bar { flex-wrap: wrap; border-radius: 16px; gap: 12px; padding: 16px; }
       .bar-divider { display: none; }
     }
   </style>
@@ -190,7 +191,7 @@
   <div class="card-body">
     <div class="card-left">
       <h1>taromaryuu</h1>
-      <div class="divider">—--- ✦ ---—</div>
+      <div class="divider">— ✦ —</div>
       <p class="bio">19 🍓 filipino 🍓 i like drawing men and cute stuff (miku)</p>
 
       <div class="buttons">
@@ -214,7 +215,7 @@
 
   <div class="bottom-bar">
     <a href="https://vgen.co/taromaryuu" target="_blank" class="bar-link">
-      <div class="bar-icon"> <img src="assets/vgenlogo.png" width="20"> </div>
+      <div class="bar-icon"><img src="assets/vgenlogo.png" width="20"></div>
       <div>
         <span class="bar-text-name">VGen</span>
         <span class="bar-text-handle">@taromaryuu</span>
@@ -224,7 +225,7 @@
     <div class="bar-divider"></div>
 
     <a href="https://twitter.com/taromaryuu" target="_blank" class="bar-link">
-      <div class="bar-icon"> <img src="assets/X-Logo.png" width="20"></div>
+      <div class="bar-icon"><img src="assets/X-Logo.png" width="20"></div>
       <div>
         <span class="bar-text-name">Twitter / X</span>
         <span class="bar-text-handle">@taromaryuu</span>
@@ -234,7 +235,7 @@
     <div class="bar-divider"></div>
 
     <a href="https://tiktok.com/@taromaryuu" target="_blank" class="bar-link">
-      <div class="bar-icon"> <img src="assets/tiktok_PNG22.png" width="20"> </div>
+      <div class="bar-icon"><img src="assets/tiktok_PNG22.png" width="20"></div>
       <div>
         <span class="bar-text-name">TikTok</span>
         <span class="bar-text-handle">@taromaryuu</span>
@@ -244,7 +245,7 @@
     <div class="bar-divider"></div>
 
     <a href="https://ko-fi.com/taromaryuu" target="_blank" class="bar-link">
-      <div class="bar-icon"> <img src="assets/ko-fi.png" width="20"> </div>
+      <div class="bar-icon"><img src="assets/ko-fi.png" width="20"></div>
       <div>
         <span class="bar-text-name">Ko-fi</span>
         <span class="bar-text-handle">@taromaryuu</span>
