@@ -26,7 +26,7 @@
 
     .card-body {
       display: flex;
-      flex: 1;
+      min-height: 380px;
     }
 
     .card-left {
@@ -38,7 +38,7 @@
     }
 
     .card-right {
-      flex: 0 0 340px;
+      flex: 0 0 380px;
       overflow: hidden;
       border-radius: 0 24px 0 0;
     }
@@ -47,7 +47,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top center;
+      object-position: top right;
       display: block;
     }
 
@@ -144,6 +144,9 @@
     }
 
     .bar-icon img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
       filter: brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(300deg);
     }
 
@@ -171,7 +174,8 @@
     @media (max-width: 768px) {
       .card-body { flex-direction: column; }
       .card-left { padding: 28px 24px 20px 24px; }
-      .card-right { flex: none; height: 280px; border-radius: 0; }
+      .card-right { flex: none; height: 300px; border-radius: 0; }
+      .card-right img { object-position: top center; }
       h1 { font-size: 2.4rem; }
       .bottom-bar { flex-wrap: wrap; border-radius: 16px; gap: 12px; padding: 16px; }
       .bar-divider { display: none; }
@@ -190,7 +194,7 @@
       <p class="bio">19 🍓 filipino 🍓 i like drawing men and cute stuff (miku)</p>
 
       <div class="buttons">
-        <a href="portfolio.html" class="btn">
+        <a href="https://vgen.co/taromaryuu/portfolio" class="btn">
           <span>📁</span>
           <span>Portfolio</span>
           <span class="btn-arrow">▶</span>
@@ -210,7 +214,7 @@
 
   <div class="bottom-bar">
     <a href="https://vgen.co/taromaryuu" target="_blank" class="bar-link">
-      <div class="bar-icon"><img src="assets/vgenlogo.png" width="20"></div>
+      <div class="bar-icon"><img src="assets/vgenlogo.png"></div>
       <div>
         <span class="bar-text-name">VGen</span>
         <span class="bar-text-handle">@taromaryuu</span>
@@ -220,7 +224,7 @@
     <div class="bar-divider"></div>
 
     <a href="https://twitter.com/taromaryuu" target="_blank" class="bar-link">
-      <div class="bar-icon"><img src="assets/X-Logo.png" width="20"></div>
+      <div class="bar-icon"><img src="assets/X-Logo.png"></div>
       <div>
         <span class="bar-text-name">Twitter / X</span>
         <span class="bar-text-handle">@taromaryuu</span>
@@ -230,7 +234,7 @@
     <div class="bar-divider"></div>
 
     <a href="https://tiktok.com/@taromaryuu" target="_blank" class="bar-link">
-      <div class="bar-icon"><img src="assets/tiktok_PNG22.png" width="20"></div>
+      <div class="bar-icon"><img src="assets/tiktok_PNG22.png"></div>
       <div>
         <span class="bar-text-name">TikTok</span>
         <span class="bar-text-handle">@taromaryuu</span>
@@ -240,7 +244,7 @@
     <div class="bar-divider"></div>
 
     <a href="https://ko-fi.com/taromaryuu" target="_blank" class="bar-link">
-      <div class="bar-icon"><img src="assets/kofi.png" width="20"></div>
+      <div class="bar-icon"><img src="assets/kofi.png"></div>
       <div>
         <span class="bar-text-name">Ko-fi</span>
         <span class="bar-text-handle">@taromaryuu</span>
