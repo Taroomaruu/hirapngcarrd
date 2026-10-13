@@ -1,0 +1,59 @@
+SIMPLE GIT COMMANDS
+
+BASIC COMMANDS
+git init — Initialize Git in a project
+git clone  — Copy a GitHub repository
+git status — Check file changes
+git add . — Stage all changes
+git add  — Stage a specific file
+git commit -m “message” — Save changes locally
+git pull — Get latest changes
+git push — Upload changes to GitHub
+git log –oneline — View commit history
+git diff — View unstaged changes
+
+BRANCH COMMANDS
+git branch — List local branches
+git branch -a — List all local and remote branches
+git switch main — Switch to main branch
+git switch -c  — Create and switch to a new branch
+git switch  — Switch to an existing branch
+git branch -d  — Delete a local branch
+git fetch — Download remote updates
+git push origin  — Push a branch to GitHub
+
+CREATE A BRANCH AND PUSH TO IT
+
+1. Get the latest changes:
+    git switch main
+    git pull origin main
+2. Create and switch to a new branch:
+    git switch -c feature/login
+3. Make your code changes.
+4. Stage your changes:
+    git add .
+5. Commit your changes:
+    git commit -m “Add login page”
+6. Push your branch to GitHub:
+    git push -u origin feature/login
+7. Open GitHub and create a Pull Request (PR) to merge your branch into main.
+
+NEXT TIME YOU PUSH CHANGES
+git add .
+git commit -m “Update login page”
+git push
+
+OTHER USEFUL COMMANDS
+git merge  — Merge another branch into your current branch
+git stash — Temporarily save uncommitted changes
+git stash pop — Restore stashed changes
+git remote -v — View remote repository URLs
+
+REMEMBER:
+
+* Add = Stage changes
+* Commit = Save changes locally
+* Push = Upload commits to GitHub
+* Pull = Download and integrate remote changes
+* Branch = Separate workspace for your code
+* Pull Request = Request to merge your branch into another branch
